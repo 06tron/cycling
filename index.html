@@ -7,49 +7,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="https://orcid.org/0009-0001-0977-2029">
 	<link rel="stylesheet" href="https://06tron.github.io/style.css">
-	<script>
-		document.addEventListener("DOMContentLoaded", function () {
-			let i = new URLSearchParams(window.location.search).get("i") ?? content.length - 1;
-			let selected = `<h2>${content[i][0]}</h2><p>${content[i][1]}`;
-			for (let j = 2; j < content[i].length; ++j) {
-				selected += `<br><a href="https://${content[i][j]}">${content[i][j]}</a>`;
-			}
-			document.getElementById("selected").innerHTML = selected + "</p>";
-			let other = "";
-			for (let k = 0; k < content.length; ++k) {
-				if (k == i) continue;
-				other += `<br><a href="https://bike.6t.lt/?i=${k}">${content[k][0]}</a>`;
-			}
-			document.getElementById("other").innerHTML = other.slice(4);
-		});
-		const button = document.getElementById("copy");
-		button.addEventListener("click", function () {
-			let all = `<h1><a href="https://bike.6t.lt">bike.6t.lt</a></h1><dl>`;
-			for (let i = 0; i < content.length; ++i) {
-				all += `<dt>${content[i][0]}</dt><dd>${content[i][1]}`;
-				for (let j = 2; j < content[i].length; ++j) {
-					all += `<br><a href="https://${content[i][j]}">${content[i][j]}</a>`;
-				}
-				all += "</dd>";
-			}
-			all = encodeURI(all + "</dl>").replaceAll("#", "%23");
-			navigator.clipboard.writeText("data:text/html;charset=UTF-8," + all);
-			button.title = "Copied!";
-			document.body.removeChild(button);
-			document.body.appendChild(button);
-			setTimeout(() => button.title = "");
-		});
-	</script>
 	<script defer src="content.js"></script>
+	<script defer src="script.js"></script>
 </head>
 
 <body>
 	<h1>bike.6t.lt</h1>
-	<p>Bike rides in Massachusetts from Amherst to Pelham, Shutesbury, Leverett, Montague, Wendell, New Salem, Orange, Belchertown, Ware, Hadley, Northampton, Sunderland, Deerfield, and Whately (so far)</p>
+	<p>Bike rides from Amherst, Massachusetts to Pelham, Shutesbury, Leverett, Montague, Wendell, New Salem, Orange, Belchertown, Ware, Hadley, Northampton, Sunderland, Deerfield, and Whately (so far)</p>
 	<main id="selected"></main>
-	<h2>Other Rides</h2>
+	<p><span class="fl">Other Rides</span></p>
+	<button id="copy" type="button">Copy all content</button>
 	<p id="other"></p>
-	<button id="copy" title="" type="button">Copy all content</button>
 </body>
 
 </html>
