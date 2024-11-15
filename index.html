@@ -1,8 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head></head>
+<head>
+	<meta charset="utf-8">
+	<meta name="color-scheme" content="dark light">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="https://orcid.org/0009-0001-0977-2029">
+	<link rel="stylesheet" href="https://06tron.github.io/style.css">
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			let i = new URLSearchParams(window.location.search).get("i") ?? content.length - 1;
+			let selected = `<h2>${content[i][0]}</h2><p>${content[i][1]}`;
+			for (let j = 2; j < content[i].length; ++j) {
+				selected += `<br><a href="https://${content[i][j]}">${content[i][j]}</a>`;
+			}
+			document.getElementById("selected").innerHTML = selected + "</p>";
+			let other = "";
+			for (let k = 0; k < content.length; ++k) {
+				if (k == i) continue;
+				other += `<br><a href="https://bike.6t.lt/?i=${k}">${content[k][0]}</a>`;
+			}
+			document.getElementById("other").innerHTML = other.slice(4);
+		});
+	</script>
+	<script defer src="content.js"></script>
+</head>
 
-<body></body>
+<body>
+	<h1>bike.6t.lt</h1>
+	<p>Some text here.</p>
+	<main id="selected"></main>
+	<h2>Other Rides</h2>
+	<p id="other"></p>
+</body>
 
 </html>
