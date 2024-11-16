@@ -1,0 +1,17 @@
+body {
+	font-family: "Segoe UI", Courier, monospace;
+	margin: 0 2rem 1rem;
+	max-width: 60rem;
+}
+
+p {
+	line-height: 1.3;
+	margin: 1rem 0;
+	overflow-wrap: break-word;
+}
+
+span.fl {
+	font-family: "American Typewriter", "Century Gothic", monospace;
+	font-size: 1.7em;
+	font-weight: normal;
+}
