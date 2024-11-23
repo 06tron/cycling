@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 	const params = new URLSearchParams(window.location.search);
-	const count = params.get("c") ?? 2;
-	const start = params.get("i") ?? content.length - count;
+	const count = +(params.get("c") ?? 2);
+	const start = +(params.get("i") ?? content.length - count);
 	let selected = "";
 	for (let i = start; i < start + count; ++i) {
 		selected += `<h2><span class="fl">${content[i][0]}</span></h2><p>${content[i][1]}`;
