@@ -11,7 +11,7 @@ p {
 }
 
 span.fl {
-	font-family: "American Typewriter", "Century Gothic", monospace;
+	font-family: "American Typewriter", "Century Gothic", system-ui;
 	font-size: 1.7em;
 	font-weight: normal;
 }
