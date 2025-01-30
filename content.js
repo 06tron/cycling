@@ -12,6 +12,6 @@ const content = [
 const ridesTBD = 1;
 
 const links = [
-	["Massachusetts Interactive Property Map", 6, 3],
-	["W.D. Cowls Timberland Information (links to public use policy)", 6, 4]
+	["Massachusetts Interactive Property Map", 7, 3],
+	["W.D. Cowls Timberland Information (links to public use policy)", 7, 4]
 ];
