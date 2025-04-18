@@ -6,12 +6,13 @@ const content = [
 	["12/07 out and back to montague", "saturday, I want to try a slightly longer ride on my road bike. Around 40 miles, with a goal of less than 3.5 hours", "ridewithgps.com/routes/49145554"],
 	["12/08 ride to mount castor", "meeting in front of the student union sunday at 1pm for this casual 9 mile ride. Might have to walk or skip the Ken Cuddeback trail section, but everywhere else is paved", "ridewithgps.com/routes/49143435"],
 	["02/03 ride to herlihy park", "leaving a little after 11am from lederle. Planning to stop to look around at riverside cemetery"],
+	["04/19 mount toby landmark tour", "planning to take the 31 bus to cliffside apartments and bike on dirt roads in the warm weather. Points of interest that could potentially be explored: middle mountain road, slip dog falls, sunderland caves, roaring brook falls, the sunbowl, south-facing ledges, mohawk brook falls. The current route is subject to change", "ridewithgps.com/routes/50366791"],
 	["TBD mostly trail ride to rattlesnake gutter", "route planning in progress, would go through the Paul C. Jones working forest", "ridewithgps.com/routes/49080614", "massgis.maps.arcgis.com/apps/OnePane/basicviewer/index.html?appid=47689963e7bb4007961676ad9fc56ae9", "wdcowls.com/forest-management/paul-c-jones-working-forest/", "rattlesnakeguttertrust.org/files/Mosher-AreaTrails-Shelter-lidar.pdf", "rattlesnakeguttertrust.org/files/Rattlesnake-Gutter-AreaTrails-lidar.pdf"]
 ];
 
 const ridesTBD = 1;
 
 const links = [
-	["Massachusetts Interactive Property Map", 7, 3],
-	["W.D. Cowls Timberland Information (links to public use policy)", 7, 4]
+	["Massachusetts Interactive Property Map", 8, 3],
+	["W.D. Cowls Timberland Information (links to public use policy)", 8, 4]
 ];
